@@ -1,0 +1,172 @@
+h1 {
+    color: black;
+    animation: colorChange 3s infinite;
+  }
+  
+  @keyframes colorChange {
+    0% {
+      color: green;
+    }
+    25% {
+      color: yellow;
+    }
+    50% {
+      color: blue;
+    }
+    75% {
+      color: lightblue;
+    }
+    100% {
+      color: purple;
+    }
+  }
+  
+  h2 {
+    color: brown;
+    font-family: verdana;
+    text-align: center;
+  }
+  
+  div.EsimeneYlesanne {
+    width: 100px;
+    height: 225px;
+    background: pink;
+    margin-left: 100px;
+    -ms-transform: rotate(-25deg);
+    -webkit-transform: rotate(-25deg);
+    -moz-transform: rotate(-25deg);
+    -o-transform: rotate(-25deg);
+    transform: rotate(-25deg);
+  }
+  /*----------YLESANNE 2----------*/
+  
+  div.TeineYlesanne {
+    width: 150px;
+    height: 100px;
+    background-image: url("https://i.ibb.co/VgjmTRF/IMG-2125.jpg");
+    background-size: 150px 100px;
+    border: 4px solid blue;
+    margin-left: 400px;
+    -ms-transform: skewY(35deg);
+    -webkit-transform: skewY(35deg);
+    -moz-transform: skewY(35deg);
+    -o-transform: skewY(35deg);
+    transform: skewY(35deg);
+    margin-bottom: 90px;
+  }
+  
+  /*----------Ylesanne 3----------*/
+  
+  div.KolmasYlesanne {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 90px;
+  }
+  
+  div.KolmasYlesanne img:first-child {
+    margin-left: 11%;
+  }
+  
+  div.KolmasYlesanne img:nth-child(2) {
+    margin-top: 10px;
+    margin-left: 300px;
+    -ms-transform: rotate(180deg) skewX(15deg);
+    -webkit-transform: rotate(180deg) skewX(15deg);
+    -moz-transform: rotate(180deg) skewX(15deg);
+    -o-transform: rotate(180deg) skewX(15deg);
+    transform: rotate(180deg) skewX(15deg);
+    opacity: 0.5;
+  }
+  
+  /*----------Ylesanne 4----------*/
+  
+  div.EllipsiMuutmine {
+    width: 200px;
+    height: 100px;
+    background: yellow;
+    border-radius: 50%;
+    margin-left: 600px;
+    border: 6px solid yellowgreen;
+    -ms-transition: all 6s linear;
+    -webkit-transition: all 6s linear;
+    -moz-transition: all 6s linear;
+    -o-transition: all 6s linear;
+    transition: all 6s linear;
+  }
+  
+  div.EllipsiMuutmine:hover {
+    width: 300px;
+    height: 300px;
+    background: blue;
+    border-radius: 80%;
+    border: 8px solid red;
+  }
+  
+  /*----------Ylesanne 5----------*/
+  
+  img.sisu {
+    margin-left: 200px;
+    -ms-transition: all 3s ease-in-out;
+    -webkit-transition: all 3s ease-in-out;
+    -moz-transition: all 3s ease-in-out;
+    -o-transition: all 3s ease-in-out;
+    transition: all 3s ease-in-out;
+  }
+  
+  img.sisu:hover {
+    border-radius: 50%;
+    box-shadow: 0px 0px 50px 20px rgba(0, 0, 255, 0.8);
+  }
+  
+  div.KuuesYlesanne {
+    width: 120px; /* Objekti algne laius*/
+    height: 85px; /* Objekti algne kõrgus */
+    background: orange; /* Objekti taust */
+    margin-left: 350px; /* Veeris vasakul pool kujundit*/
+    margin-top: 190px; /* Veeris kujundist üleval */
+    margin-bottom: 150px; /* Veeris kujundist allpool*/
+    transition: transform 2s ease-in-out, opacity 2s ease-in-out,
+      background-color 2s ease-in-out; /* Alguses kiirenev ja lõpus aeglustuv taustavärvi üleminek 2 sek jooksul*/
+    border-radius: 0%; /* Nurgad pole ümarad*/
+  }
+  
+  div.KuuesYlesanne:hover {
+    transform: rotate(1080deg) scale(2); /* Rotate and scale the object on hover */
+    opacity: 0.7; /* Teeb läbipaistvamaks */
+    background-color: green; /* Taustavärv muutub roheliseks */
+    border-radius: 50%; /* Kujund muutub ümaraks */
+    margin-bottom: 150px; /* Veeris kujundist allpool */
+    animation: vahvaTransformatsioon 5s ease infinite; /* Animatsioon, nimega "vahvaTransformatsioon", mis töötab igavesti(infinite) */
+  }
+  
+  @keyframes vahvaTransformatsioon {
+    0%,
+    100% {
+      /* Transformatsiooni algus ja lõpp */
+      background-color: orange; /* Taustavärvi valik */
+      border-radius: 0%; /* Nurkade ümaruse valik */
+    }
+    20% {
+      /* Transformatsiooni esimene viiendik jne. */
+      background-color: blue; /* Taustavärvi valik */
+      border-radius: 20%; /* Nurkade ümaruse valik */
+      transform: rotate(1080deg) scale(0.75); /* Kujundi roteerimine 1080 kraadi ja skaleerimine 75% peale */
+    }
+    40% {
+      background-color: green;
+      border-radius: 75%;
+    }
+    80% {
+      background-color: red;
+      border-radius: 25%;
+      transform: rotate(760deg) scale(2.5);
+    }
+    95% {
+      background-color: purple;
+      border-radius: 25%;
+      transform: rotate(1060deg) scale(1.4);
+    }
+  }
+  
